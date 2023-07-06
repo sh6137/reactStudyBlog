@@ -67,12 +67,13 @@ function App() {
                                     따봉변경(copy);
                                 }}> ❣️</span> {따봉[i]} </h4>
                             <p>2월 17일 발행</p>
-                            <button onClick={()=>{
+                            <button onClick={() => {
                                 console.log("삭제");
                                 let copy = [...글제목];
-                                copy.splice(i,1);
+                                copy.splice(i, 1);
                                 글제목변경(copy);
-                            }}>삭제</button>
+                            }}>삭제
+                            </button>
                         </div>
                     )
                 })
@@ -110,6 +111,29 @@ function Modal(props) {
             </button>
         </div>
     )
+}
+
+// eslint-disable-next-line no-undef
+class Modal2 extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: 'kim',
+            age: 20
+        }
+    }
+
+    // eslint-disable-next-line react/require-render-return
+    render() {
+        return (
+            <div>안녕 {this.props.age}
+                <button onClick={() => {
+                    this.setState({age: 21})
+                }}>버튼
+                </button>
+            </div>
+        )
+    }
 }
 
 export default App;
