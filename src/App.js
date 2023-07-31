@@ -86,6 +86,10 @@ function App() {
                 let copy = [...글제목];
                 copy.unshift(입력값);
                 글제목변경(copy);
+
+                let copyDDaBong = [...따봉];
+                copyDDaBong.unshift(0);
+                따봉변경(copyDDaBong);
             }
             }/>
 
@@ -114,26 +118,26 @@ function Modal(props) {
 }
 
 // eslint-disable-next-line no-undef
-class Modal2 extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: 'kim',
-            age: 20
-        }
-    }
-
-    // eslint-disable-next-line react/require-render-return
-    render() {
-        return (
-            <div>안녕 {this.props.age}
-                <button onClick={() => {
-                    this.setState({age: 21})
-                }}>버튼
-                </button>
-            </div>
-        )
-    }
-}
+// class Modal2 extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             name: 'kim',
+//             age: 20
+//         }
+//     }
+//
+//     // eslint-disable-next-line react/require-render-return
+//     render() {
+//         return (
+//             <div>안녕 {this.props.age}
+//                 <button onClick={() => {
+//                     this.setState({age: 21})
+//                 }}>버튼
+//                 </button>
+//             </div>
+//         )
+//     }
+// }
 
 export default App;
